@@ -1,4 +1,4 @@
-from statistics import mean
+from statistics import mean, median
 
 
 def highest_score(student_list):
@@ -31,9 +31,11 @@ def average_score(student_list):
     if not student_list:
         raise ValueError("Student list is empty.")
 
-    scores = []
+    return mean(student["score"] for student in student_list)
 
-    for student in student_list:
-        scores.append(student["score"])
 
-    return mean(scores)
+def median_score(student_list):
+    if not student_list:
+        raise ValueError("Student list is empty.")
+
+    return median(student["score"] for student in student_list)
