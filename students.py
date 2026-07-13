@@ -1,3 +1,12 @@
+from dataclasses import dataclass
+
+
+@dataclass
+class Student:
+    name: str
+    score: int
+
+
 students = [
     {"name": "Chidi Gloria", "score": 48},
     {"name": "Mohammed Adamu", "score": 51},
