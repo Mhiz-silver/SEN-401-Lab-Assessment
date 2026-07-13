@@ -11,13 +11,17 @@ for student in students:
 
 print()
 
-top_student = highest_score(students)
-low_student = lowest_score(students)
+try:
+    top_student = highest_score(students)
+    low_student = lowest_score(students)
 
-print("Highest Score")
-print(top_student["name"], "-", top_student["score"])
+    print("Highest Score")
+    print(top_student["name"], "-", top_student["score"])
 
-print()
+    print()
 
-print("Lowest Score")
-print(low_student["name"], "-", low_student["score"])
+    print("Lowest Score")
+    print(low_student["name"], "-", low_student["score"])
+
+except ValueError as error:
+    print(error)

@@ -1,4 +1,6 @@
 def highest_score(student_list):
+    if not student_list:
+        raise ValueError("Student list is empty.")
 
     highest = student_list[0]
 
@@ -10,6 +12,9 @@ def highest_score(student_list):
 
 
 def lowest_score(student_list):
+    if not student_list:
+        raise ValueError("Student list is empty.")
+
     lowest = student_list[0]
 
     for student in student_list:
